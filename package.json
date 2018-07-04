@@ -1,13 +1,21 @@
 {
     "scripts": {
-        "start": "nodemon",
-        "ngrok": "./ngrok http 3333"
+        "start": "node .",
+        "dev": "nodemon",
+        "ngrok": "./ngrok http 3333",
+        "deploy": "now --public && now alias"
+    },
+    "now": {
+        "alias": "alice-uraljs"
     },
     "private": true,
     "dependencies": {
         "moment": "^2.22.2",
         "node-fetch": "^2.1.2",
-        "nodemon": "^1.17.5",
         "yandex-dialogs-sdk": "github:sameoldmadness/yandex-dialogs-sdk#no-ts"
+    },
+    "devDependencies": {
+        "nodemon": "^1.17.5",
+        "now": "^11.2.5"
     }
 }

@@ -36,4 +36,4 @@ alice.any(ctx => {
     ctx.reply('привет');
 });
 
-alice.listen('/', 3333);
+alice.listen('/', process.env.post || 3333);
